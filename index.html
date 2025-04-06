@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- css, js links -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again -->
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container">
+      <!-- part one -->
+      <div class="part-one">
+        <!-- logo -->
+        <img src="./images/logo.svg" alt="" />
+
+        <!-- score -->
+        <div class="score-cont">
+          <p>score</p>
+          <p id="score">12</p>
+        </div>
+      </div>
+
+      <!-- part two -->
+      <div class="part-two">
+        <!-- up -->
+        <div class="up-cont">
+          <!-- paper -->
+          <div onclick="turn_play_page(event)" class="paper">
+            <img src="./images/icon-paper.svg" />
+          </div>
+
+          <!-- triangle -->
+          <img class="triangle" src="./images/bg-triangle.svg" />
+
+          <!-- scissors -->
+          <div onclick="turn_play_page(event)" class="scissors">
+            <img src="./images/icon-scissors.svg" />
+          </div>
+        </div>
+
+        <!-- rock -->
+        <div onclick="turn_play_page(event)" class="rock">
+          <img src="./images/icon-rock.svg" />
+        </div>
+      </div>
+
+      <!-- rules btn -->
+      <button onclick="show_rules()" class="rules-btn">rules</button>
+      <!-- overlay rules -->
+      <div onclick="hide_rules()" class="rules-overlay"></div>
+      <!-- rules -->
+      <div class="rules">
+        <div class="head-rules">
+          <h3>rules</h3>
+          <i onclick="hide_rules()" class="ri-close-large-line close-rules"></i>
+        </div>
+        <img src="./images/image-rules.svg" />
+      </div>
+      <!-- end of rules -->
+
+      <!-- play page -->
+      <div class="play-page">
+        <!-- my picked -->
+        <div class="my-picked">
+          <p>you picked</p>
+          <div class="my-picked-img">
+            <img src="./images/icon-scissors.svg" />
+          </div>
+        </div>
+
+        <!-- winner -->
+        <div class="winner-cont">
+          <h2>you win</h2>
+          <!-- <h2>you lose</h2> -->
+          <p onclick="play_again()">play again</p>
+        </div>
+
+        <!-- house picked -->
+        <div class="house-picked">
+          <p>the house picked</p>
+          <div class="house-img">
+            <img src="./images/icon-rock.svg" />
+          </div>
+        </div>
+
+      </div>
+      <!-- end of play page -->
+    </div>
+    <!-- end of container -->
+  </body>
+</html>
