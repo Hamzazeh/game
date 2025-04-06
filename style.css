@@ -313,10 +313,6 @@ body {
 
 /* mobile */
 @media (width<500px) {
-  body {
-    background: #000000c4;
-  }
-
   /* container */
   .container {
     display: flex;
